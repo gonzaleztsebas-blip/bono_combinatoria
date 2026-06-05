@@ -1,12 +1,7 @@
 # Bono de Programación — Problemas Generales de Conteo
-**Matemáticas Discretas I — Universidad Nacional de Colombia**  
-Docente: Jhoan Sebastian Tenjo García
-
----
-
 ## Descripción
 
-Este repositorio contiene la solución a dos problemas de combinatoria del bono de programación del segundo corte. El objetivo es construir herramientas generales que calculen correctamente para distintos valores de entrada, no solo un caso fijo.
+Solución a los problemas 1 y 9 del bono de programación del segundo corte. Cada problema está implementado como una herramienta general — no resuelve un único caso fijo sino que recibe parámetros del usuario y calcula para cualquier entrada válida.
 
 ---
 
@@ -152,15 +147,34 @@ Total de arreglos distintos:
 
 ---
 
+## Uso de Inteligencia Artificial
+
+Durante el desarrollo se utilizó Claude (Anthropic) como apoyo puntual.
+El modelado matemático, la lógica de todas las funciones implementadas
+y la estructura general del programa fueron desarrollados manualmente.
+
+En cuanto a la interfaz, elementos como la estructura de los menús,
+los mensajes al usuario y la navegación entre opciones fueron
+realizados de forma manual.
+
+Considero que el uso de estas herramientas fue complementario al
+proceso de desarrollo, utilizándose como apoyo técnico y no como
+sustituto del razonamiento o la implementación principal.
+
+**Uso específico de IA:**
+- Detección de bugs en la validación de entradas
+- Reestructuración de los menús anidados
+- Revisión y mejora de comentarios y documentación
+- Apoyo en la redacción del README
+
+---
+
 ## Validación de casos especiales
 
-| Entrada | Comportamiento |
-|---|---|
-| n o r negativos | Mensaje de error, vuelve a pedir |
-| r > n | Mensaje de error, vuelve a pedir |
-| Texto en lugar de número | Mensaje de error, vuelve a pedir |
-| P(n, 0) | Retorna 1 correctamente |
-| P(n, n) | Retorna n! correctamente |
-| Palabra vacía | Mensaje de error |
-| Palabra > 12 letras (opción manual) | Mensaje de error |
-| Lista con valores no numéricos | Mensaje de error |
+- Si n o r son negativos, el programa muestra un error y vuelve a pedir la entrada
+- Si r > n, mismo comportamiento
+- Si se ingresa texto en lugar de número, no explota — pide de nuevo
+- P(n, 0) retorna 1 y P(n, n) retorna n!, ambos correctos
+- Palabra vacía en el problema 9 muestra error
+- Palabras de más de 12 letras en la generación manual están bloqueadas para evitar que el programa se cuelgue
+- Lista con valores no numéricos en el problema 9 muestra error
